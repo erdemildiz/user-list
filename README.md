@@ -7,7 +7,7 @@ Programı aşağıdaki adımlardan çalıştırabilirsiniz.
 
 ```
 $ git clone https://github.com/erdemildiz/user-list.git
-$ cd github-user-list
-$ node start
+$ cd user-list
+$ npm install
+$ npm start
 ```
- 
