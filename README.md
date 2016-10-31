@@ -6,7 +6,7 @@ Programı aşağıdaki adımlardan çalıştırabilirsiniz.
 
 
 ```
-$ git clone https://github.com/erdemildiz/github-user-list.git
+$ git clone https://github.com/erdemildiz/user-list.git
 $ cd github-user-list
 $ node start
 ```
