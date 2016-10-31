@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-heading text-center">User Details</div>
+  <div class="panel-body">
+    <div class="row">
+      <!-- Avatar resmi -->
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img class="img-rounded" src="{{ avatar }}" alt="{{ name }}">
+          <div class="caption text-center">
+            <h3>{{ name }}</h3>
+            <a href="mailto:{{ email }}">{{ email }}</a>
+          </div>
+        </div>
+      </div>
+      <!-- Kullanıcı repoları -->
+      <div class="col-md-8">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let repo of repos[0]">
+            <div class="row">
+              <div class="col-md-6">{{ repo.full_name }}</div>
+              <div class="col-md-3">{{ repo.language }}</div>
+              <div class="col-md-3">&#x2605; {{ repo.stargazers_count }}</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

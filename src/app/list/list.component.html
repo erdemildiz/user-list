@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+  <div class="panel-heading text-center">User List</div>
+  <div class="panel-body">
+    <ul class="list-group user">
+<!-- | slice:{b:(pageNumber * 10), e:(pageNumber * 10 + 10)}-->
+      <li class="list-group-item" *ngFor="let user of users">
+        <div class="row user-item">
+          <!-- Avatar resmi -->
+          <div class="col-md-2 col-xs-12 user__item--avatar">
+            <img class="img-responsive img-rounded" [src]="user.avatar_url" alt="{{ user.name }}">
+          </div>
+          <!-- Kullanıcı bilgileri -->
+          <div class="col-md-6 col-xs-12  user__item--info">
+            <h2>{{ user.name }}</h2>
+            <a href="mailto:{{ user.email }}">{{ user.email }}</a>
+            <h4>Followers <span class="badge">{{ user.followers }}</span></h4>
+            <a class="btn btn-primary" [routerLink]="['list', user.login]">Details</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Saylama -->
+<div class="text-center">
+  <nav aria-label="navigation">
+    <ul class="pagination">
+      <li *ngFor="let number of [0,1,2,3]" [ngClass]="{'disabled': number == pageNumber}">
+        <a (click)="goPage(number)">{{ number + 1 }}</a>
+      </li>
+    </ul>
+  </nav>
+</div>

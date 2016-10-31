@@ -1,0 +1,19 @@
+/*
+  App componenet sayfası için css dosyasıdır
+*/
+
+.user-wrapper {
+  margin-top: 20px;
+}
+
+.user-wrapper .user__item--avatar {
+  border-radius: 50px;
+}
+
+.user-wrapper .user__item--info h2 {
+  margin: 5px 0;
+}
+
+.user-wrapper .user__item--info h4 {
+  margin: 7px 0;
+}
